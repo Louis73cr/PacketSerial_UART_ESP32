@@ -1,6 +1,6 @@
 {
   "name": "PacketSerial-UART-ESP32",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library to send and receive structured binary packets over UART for ESP32",
   "keywords": "UART,ESP32,communication",
   "authors": [

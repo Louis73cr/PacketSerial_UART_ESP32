@@ -109,9 +109,7 @@ void loop() {
 - `TYPE_FLOAT = 3` - Float (4 bytes)
 - `TYPE_STRING = 4` - String (variable length)
 
-## API Reference
-
-### Methods
+## Methods
 - `void begin(uint32_t baud)` - Initialize serial communication
 - `void sendPacket(uint8_t cmd, uint8_t type, const uint8_t* data, uint8_t len)` - Send raw packet
 - `void sendBool(uint8_t cmd, bool v)` - Send boolean value
@@ -139,7 +137,7 @@ See `examples/` folder for complete sketches.
 Louis Croci <louis.croci@icloud.com>
 
 ## Version
-1.0.0 (2025-11-15)
+1.0.4 (2025-11-15)
 
 ## License
 MIT License - Feel free to use in your projects!

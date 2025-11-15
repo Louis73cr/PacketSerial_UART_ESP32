@@ -69,8 +69,9 @@ void PacketSerial::sendFloat(uint8_t cmd, float v) {
 
 
 void PacketSerial::sendString(uint8_t cmd, const char* s) {
-    uint8_t len = strlen(s) + 1;
-    sendPacket(cmd, TYPE_STRING, (const uint8_t*)s, len);
+    uint16_t fullLen = strlen(s);
+    uint8_t len = (fullLen > 254) ? 254 : fullLen;
+    sendPacket(cmd, TYPE_STRING, (const uint8_t*)s, len + 1);
 }
 
 bool PacketSerial::readPacket(ReceivedPacket &rp) {
